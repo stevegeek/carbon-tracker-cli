@@ -1,0 +1,66 @@
+carbon_offset:
+  currency: USD
+  monthly_budget: 0
+  diversity_factor: 0.3
+  
+  # Default tree types for demonstration
+  default_trees:
+    - name: Oak
+      co2_absorption: 500
+      cost: 25
+      description: "Strong hardwood, excellent for carbon sequestration"
+    - name: Pine
+      co2_absorption: 300
+      cost: 15
+      description: "Fast-growing conifer, good for reforestation"
+    - name: Maple
+      co2_absorption: 400
+      cost: 20
+      description: "Beautiful deciduous tree with good carbon capture"
+    - name: Birch
+      co2_absorption: 250
+      cost: 12
+      description: "Hardy tree that grows in various climates"
+    - name: Willow
+      co2_absorption: 450
+      cost: 30
+      description: "Fast-growing tree that loves water"
+  
+  # Optimization settings
+  optimization:
+    modes:
+      - balanced
+      - cost_efficient
+      - max_diversity
+    default_mode: balanced
+    min_tree_types: 2
+    max_tree_types: 5
+  
+  # Projection defaults
+  projections:
+    default_years: 5
+    scenarios:
+      conservative:
+        carbon_growth: 10
+        budget_growth: 3
+      moderate:
+        carbon_growth: 5
+        budget_growth: 5
+      optimistic:
+        carbon_growth: 0
+        budget_growth: 7
+      aggressive:
+        carbon_growth: -5
+        budget_growth: 10
+  
+  # Report settings
+  reports:
+    progress_bar_width: 30
+    recent_entries_limit: 10
+    carbon_history_months: 12
+  
+  # Storage settings
+  storage:
+    backup_limit: 5
+    auto_backup: true
+    data_format: json

@@ -1,0 +1,336 @@
+{
+  "transport": {
+    "flight_domestic": {
+      "unit": "trip",
+      "co2_per_unit": 200,
+      "description": "Domestic flight (average)"
+    },
+    "flight_short": {
+      "unit": "trip",
+      "co2_per_unit": 255,
+      "description": "Short-haul flight (<3 hours)"
+    },
+    "flight_medium": {
+      "unit": "trip",
+      "co2_per_unit": 500,
+      "description": "Medium-haul flight (3-6 hours)"
+    },
+    "flight_long": {
+      "unit": "trip",
+      "co2_per_unit": 1500,
+      "description": "Long-haul flight (>6 hours)"
+    },
+    "flight_international": {
+      "unit": "trip",
+      "co2_per_unit": 1100,
+      "description": "International flight (average)"
+    },
+    "car_petrol": {
+      "unit": "km",
+      "co2_per_unit": 0.192,
+      "description": "Petrol car per km"
+    },
+    "car_diesel": {
+      "unit": "km",
+      "co2_per_unit": 0.171,
+      "description": "Diesel car per km"
+    },
+    "car_electric": {
+      "unit": "km",
+      "co2_per_unit": 0.053,
+      "description": "Electric car per km (avg grid)"
+    },
+    "car_hybrid": {
+      "unit": "km",
+      "co2_per_unit": 0.120,
+      "description": "Hybrid car per km"
+    },
+    "bus": {
+      "unit": "km",
+      "co2_per_unit": 0.089,
+      "description": "Bus per km"
+    },
+    "train": {
+      "unit": "km",
+      "co2_per_unit": 0.041,
+      "description": "Train per km"
+    },
+    "subway": {
+      "unit": "km",
+      "co2_per_unit": 0.030,
+      "description": "Subway/metro per km"
+    },
+    "taxi": {
+      "unit": "km",
+      "co2_per_unit": 0.210,
+      "description": "Taxi per km"
+    },
+    "motorcycle": {
+      "unit": "km",
+      "co2_per_unit": 0.114,
+      "description": "Motorcycle per km"
+    },
+    "ferry": {
+      "unit": "km",
+      "co2_per_unit": 0.115,
+      "description": "Ferry per km"
+    }
+  },
+  "energy": {
+    "electricity": {
+      "unit": "kWh",
+      "co2_per_unit": 0.385,
+      "description": "Electricity (global average)"
+    },
+    "electricity_us": {
+      "unit": "kWh",
+      "co2_per_unit": 0.420,
+      "description": "Electricity (US average)"
+    },
+    "electricity_eu": {
+      "unit": "kWh",
+      "co2_per_unit": 0.295,
+      "description": "Electricity (EU average)"
+    },
+    "natural_gas": {
+      "unit": "kWh",
+      "co2_per_unit": 0.185,
+      "description": "Natural gas per kWh"
+    },
+    "heating_oil": {
+      "unit": "liter",
+      "co2_per_unit": 2.52,
+      "description": "Heating oil per liter"
+    },
+    "coal": {
+      "unit": "kg",
+      "co2_per_unit": 2.42,
+      "description": "Coal per kg"
+    },
+    "propane": {
+      "unit": "liter",
+      "co2_per_unit": 1.51,
+      "description": "Propane per liter"
+    },
+    "wood": {
+      "unit": "kg",
+      "co2_per_unit": 0.39,
+      "description": "Wood per kg (sustainable)"
+    }
+  },
+  "food": {
+    "beef": {
+      "unit": "kg",
+      "co2_per_unit": 27.0,
+      "description": "Beef per kg"
+    },
+    "lamb": {
+      "unit": "kg",
+      "co2_per_unit": 39.2,
+      "description": "Lamb per kg"
+    },
+    "pork": {
+      "unit": "kg",
+      "co2_per_unit": 12.1,
+      "description": "Pork per kg"
+    },
+    "chicken": {
+      "unit": "kg",
+      "co2_per_unit": 6.9,
+      "description": "Chicken per kg"
+    },
+    "fish": {
+      "unit": "kg",
+      "co2_per_unit": 5.0,
+      "description": "Fish per kg (average)"
+    },
+    "cheese": {
+      "unit": "kg",
+      "co2_per_unit": 13.5,
+      "description": "Cheese per kg"
+    },
+    "milk": {
+      "unit": "liter",
+      "co2_per_unit": 1.9,
+      "description": "Milk per liter"
+    },
+    "eggs": {
+      "unit": "dozen",
+      "co2_per_unit": 4.8,
+      "description": "Eggs per dozen"
+    },
+    "rice": {
+      "unit": "kg",
+      "co2_per_unit": 2.7,
+      "description": "Rice per kg"
+    },
+    "vegetables": {
+      "unit": "kg",
+      "co2_per_unit": 2.0,
+      "description": "Vegetables per kg (average)"
+    },
+    "fruit": {
+      "unit": "kg",
+      "co2_per_unit": 1.1,
+      "description": "Fruit per kg (local)"
+    },
+    "bread": {
+      "unit": "kg",
+      "co2_per_unit": 1.1,
+      "description": "Bread per kg"
+    },
+    "coffee": {
+      "unit": "kg",
+      "co2_per_unit": 8.7,
+      "description": "Coffee per kg"
+    },
+    "chocolate": {
+      "unit": "kg",
+      "co2_per_unit": 4.9,
+      "description": "Chocolate per kg"
+    },
+    "beer": {
+      "unit": "liter",
+      "co2_per_unit": 1.2,
+      "description": "Beer per liter"
+    },
+    "wine": {
+      "unit": "bottle",
+      "co2_per_unit": 1.8,
+      "description": "Wine per 750ml bottle"
+    }
+  },
+  "shopping": {
+    "clothing_item": {
+      "unit": "item",
+      "co2_per_unit": 10,
+      "description": "Average clothing item"
+    },
+    "jeans": {
+      "unit": "pair",
+      "co2_per_unit": 33,
+      "description": "Pair of jeans"
+    },
+    "tshirt": {
+      "unit": "item",
+      "co2_per_unit": 7,
+      "description": "Cotton t-shirt"
+    },
+    "shoes": {
+      "unit": "pair",
+      "co2_per_unit": 14,
+      "description": "Pair of shoes"
+    },
+    "smartphone": {
+      "unit": "device",
+      "co2_per_unit": 70,
+      "description": "Smartphone"
+    },
+    "laptop": {
+      "unit": "device",
+      "co2_per_unit": 350,
+      "description": "Laptop computer"
+    },
+    "tablet": {
+      "unit": "device",
+      "co2_per_unit": 120,
+      "description": "Tablet device"
+    },
+    "tv": {
+      "unit": "device",
+      "co2_per_unit": 500,
+      "description": "Television"
+    },
+    "furniture_small": {
+      "unit": "item",
+      "co2_per_unit": 50,
+      "description": "Small furniture item"
+    },
+    "furniture_large": {
+      "unit": "item",
+      "co2_per_unit": 200,
+      "description": "Large furniture item"
+    },
+    "book": {
+      "unit": "item",
+      "co2_per_unit": 1.2,
+      "description": "Paperback book"
+    },
+    "plastic_bag": {
+      "unit": "bag",
+      "co2_per_unit": 0.033,
+      "description": "Plastic shopping bag"
+    },
+    "paper_bag": {
+      "unit": "bag",
+      "co2_per_unit": 0.040,
+      "description": "Paper shopping bag"
+    }
+  },
+  "waste": {
+    "landfill": {
+      "unit": "kg",
+      "co2_per_unit": 0.467,
+      "description": "Waste to landfill per kg"
+    },
+    "recycling": {
+      "unit": "kg",
+      "co2_per_unit": 0.021,
+      "description": "Recycling per kg"
+    },
+    "composting": {
+      "unit": "kg",
+      "co2_per_unit": 0.014,
+      "description": "Composting per kg"
+    },
+    "water": {
+      "unit": "cubic_meter",
+      "co2_per_unit": 0.344,
+      "description": "Water supply and treatment"
+    }
+  },
+  "accommodation": {
+    "hotel_night": {
+      "unit": "night",
+      "co2_per_unit": 21.0,
+      "description": "Hotel stay per night"
+    },
+    "house_heating": {
+      "unit": "year",
+      "co2_per_unit": 2400,
+      "description": "Average house heating per year"
+    },
+    "apartment_heating": {
+      "unit": "year",
+      "co2_per_unit": 1600,
+      "description": "Average apartment heating per year"
+    }
+  },
+  "digital": {
+    "email": {
+      "unit": "email",
+      "co2_per_unit": 0.004,
+      "description": "Per email sent"
+    },
+    "streaming_hd": {
+      "unit": "hour",
+      "co2_per_unit": 0.08,
+      "description": "HD video streaming per hour"
+    },
+    "streaming_4k": {
+      "unit": "hour",
+      "co2_per_unit": 0.24,
+      "description": "4K video streaming per hour"
+    },
+    "cloud_storage": {
+      "unit": "GB_month",
+      "co2_per_unit": 0.01,
+      "description": "Cloud storage per GB per month"
+    },
+    "video_call": {
+      "unit": "hour",
+      "co2_per_unit": 0.15,
+      "description": "Video call per hour"
+    }
+  }
+}

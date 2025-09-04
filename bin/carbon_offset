@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require_relative "../lib/carbon_offset"
+
+begin
+  CarbonOffset::CLI.start(ARGV)
+rescue CarbonOffset::ValidationError => e
+  puts "Validation Error: #{e.message}".colorize(:red)
+  exit 1
+rescue CarbonOffset::NotFoundError => e
+  puts "Not Found: #{e.message}".colorize(:red)
+  exit 1
+rescue CarbonOffset::Error => e
+  puts "Error: #{e.message}".colorize(:red)
+  exit 1
+rescue Interrupt
+  puts "\nOperation cancelled.".colorize(:yellow)
+  exit 0
+end
