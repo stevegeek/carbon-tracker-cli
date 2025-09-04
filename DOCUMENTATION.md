@@ -250,8 +250,8 @@ Reports include:
 # Create backup
 ruby bin/carbon_offset backup
 
-# Restore from backup
-ruby bin/carbon_offset restore ~/.carbon_offset/carbon_config_backup_20240915_143022.json
+# Restore from backup  
+ruby bin/carbon_offset restore .carbon_data/carbon_config_backup_20240915_143022.json
 ```
 
 #### Export Data
@@ -299,7 +299,37 @@ The optimizer uses a two-phase approach:
 
 ## Data Storage
 
-All data is stored in JSON format at `~/.carbon_offset/carbon_config.json`:
+By default, data is stored locally in the current directory at `./.carbon_data/carbon_config.json`. This directory is automatically excluded from version control via `.gitignore`.
+
+### Storage Locations
+
+You can configure where data is stored in three ways:
+
+1. **Default (Local Directory)**
+   ```bash
+   # Data stored in ./.carbon_data/ in current working directory
+   ruby bin/carbon_offset config
+   ```
+
+2. **Custom Directory**
+   ```bash
+   # Set a custom location
+   ruby bin/carbon_offset config --data-dir ~/Documents/carbon_data
+   
+   # Or use a project-specific directory
+   ruby bin/carbon_offset config --data-dir ./my_carbon_tracking
+   ```
+
+3. **Environment Variable**
+   ```bash
+   # Set globally via environment variable
+   export CARBON_DATA_DIR=/path/to/carbon/data
+   ruby bin/carbon_offset config
+   ```
+
+### Data File Structure
+
+The main configuration file `carbon_config.json` contains:
 
 ```json
 {
@@ -461,15 +491,16 @@ ruby bin/carbon_offset plan --mode balanced        # Balanced approach
 - Consider one-time budget increases
 
 **Q: Data not persisting**
-- Check write permissions for ~/.carbon_offset/
+- Check write permissions for .carbon_data/ directory
 - Verify JSON file isn't corrupted
 - Use backup/restore if needed
+- Ensure you're in the correct working directory (data is stored locally by default)
 
 ## Command Reference
 
 | Command | Description |
 |---------|-------------|
-| `config` | Configure budget, currency, data directory |
+| `config` | Configure budget, currency, data directory (default: ./.carbon_data) |
 | `tree add NAME CO2 COST` | Add tree type |
 | `tree list` | List all tree types |
 | `carbon add AMOUNT [DESC]` | Add carbon entry (direct CO2) |
